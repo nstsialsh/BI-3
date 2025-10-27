@@ -17,3 +17,10 @@ for i in range(8):
         if M2[i, j] == 0:
             continue
         product = M1[i, j] * M2[i, j]
+        if product == 1:
+            X3 += 1
+        elif product == -1:
+            if M2[i, j] == 1:
+                X1 += 1
+            else:  # M2[i, j] == -1
+                X2 += 1
