@@ -22,7 +22,7 @@ for i in range(8):
         elif product == -1:
             if M2[i, j] == 1:
                 X1 += 1
-            else:  # M2[i, j] == -1
+            else:
                 X2 += 1
 print(f"\nX1 (белые на чёрных) = {X1}")
 print(f"X2 (чёрные на белых) = {X2}")
