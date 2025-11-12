@@ -1,4 +1,4 @@
-def is_inside_simple(A, B, C, P):
+def is_inside_simple(A, B, C, P, epsilon=1e-10):
     x1, y1 = A
     x2, y2 = B
     x3, y3 = C
@@ -9,7 +9,7 @@ def is_inside_simple(A, B, C, P):
     area3 = (x1*(y2-y) + x2*(y-y1) + x*(y1-y2)) / 2
     area_main = (x1*(y2-y3) + x2*(y3-y1) + x3*(y1-y2)) / 2
     
-    return abs(area1) + abs(area2) + abs(area3) == abs(area_main)
+    return abs(abs(area1) + abs(area2) + abs(area3) - abs(area_main)) < epsilon
 
 A = (0, 2)
 B = (5, 0)
