@@ -17,3 +17,15 @@ def solve_cryptarithmetic():
     available_digits = [d for d in range(10) if d != 5]
     
     checked = 0
+
+for perm in permutations(available_digits, len(remaining_letters)):
+        checked += 1
+        
+        mapping = fixed.copy()
+        mapping.update(zip(remaining_letters, perm))
+        
+        if len(set(mapping.values())) != len(mapping.values()):
+            continue
+            
+        if mapping['G'] == 0 or mapping['R'] == 0:
+            continue
