@@ -44,3 +44,8 @@ for perm in permutations(available_digits, len(remaining_letters)):
         
         if donald + gerald == robert:
 
+       if donald + gerald == robert:
+           
+            print("")
+            for letter in sorted(mapping.keys()):
+                print(f"  {letter} = {mapping[letter]}")
