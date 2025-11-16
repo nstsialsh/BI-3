@@ -1,0 +1,13 @@
+from itertools import permutations
+
+def solve_cryptarithmetic():
+  
+    print("  DONALD")
+    print("+ GERALD")
+    print("--------")
+    print(" ROBERT")
+    print("Условие: D = 5")
+    
+    letters = "DONALGERBT"
+    
+    fixed = {'D': 5}
