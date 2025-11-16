@@ -29,3 +29,18 @@ for perm in permutations(available_digits, len(remaining_letters)):
             
         if mapping['G'] == 0 or mapping['R'] == 0:
             continue
+
+        donald = (mapping['D'] * 100000 + mapping['O'] * 10000 + 
+                 mapping['N'] * 1000 + mapping['A'] * 100 + 
+                 mapping['L'] * 10 + mapping['D'])
+        
+        gerald = (mapping['G'] * 100000 + mapping['E'] * 10000 + 
+                 mapping['R'] * 1000 + mapping['A'] * 100 + 
+                 mapping['L'] * 10 + mapping['D'])
+        
+        robert = (mapping['R'] * 100000 + mapping['O'] * 10000 + 
+                 mapping['B'] * 1000 + mapping['E'] * 100 + 
+                 mapping['R'] * 10 + mapping['T'])
+        
+        if donald + gerald == robert:
+
