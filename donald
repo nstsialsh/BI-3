@@ -11,3 +11,9 @@ def solve_cryptarithmetic():
     letters = "DONALGERBT"
     
     fixed = {'D': 5}
+
+    remaining_letters = [letter for letter in letters if letter not in fixed]
+    
+    available_digits = [d for d in range(10) if d != 5]
+    
+    checked = 0
