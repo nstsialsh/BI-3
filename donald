@@ -1,7 +1,6 @@
 from itertools import permutations
 
 def solve_cryptarithmetic():
-  
     print("  DONALD")
     print("+ GERALD")
     print("--------")
@@ -18,7 +17,7 @@ def solve_cryptarithmetic():
     
     checked = 0
 
-for perm in permutations(available_digits, len(remaining_letters)):
+    for perm in permutations(available_digits, len(remaining_letters)):
         checked += 1
         
         mapping = fixed.copy()
@@ -43,13 +42,10 @@ for perm in permutations(available_digits, len(remaining_letters)):
                  mapping['R'] * 10 + mapping['T'])
         
         if donald + gerald == robert:
-
-       if donald + gerald == robert:
-           
             print("")
             for letter in sorted(mapping.keys()):
                 print(f"  {letter} = {mapping[letter]}")
-
+                
             print(f"  DONALD = {donald:6}")
             print(f"+ GERALD = {gerald:6}")
             print(f"--------   {donald + gerald:6}")
@@ -57,3 +53,9 @@ for perm in permutations(available_digits, len(remaining_letters)):
             
             print(f"\n{donald} + {gerald} = {robert}")
             return mapping
+    
+    print(f"\n{checked}")
+    return None
+
+if __name__ == "__main__":
+    solution = solve_cryptarithmetic()
