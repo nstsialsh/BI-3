@@ -49,3 +49,11 @@ for perm in permutations(available_digits, len(remaining_letters)):
             print("")
             for letter in sorted(mapping.keys()):
                 print(f"  {letter} = {mapping[letter]}")
+
+            print(f"  DONALD = {donald:6}")
+            print(f"+ GERALD = {gerald:6}")
+            print(f"--------   {donald + gerald:6}")
+            print(f" ROBERT = {robert:6}")
+            
+            print(f"\n{donald} + {gerald} = {robert}")
+            return mapping
